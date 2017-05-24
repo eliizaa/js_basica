@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<script>
+		function primoOunao(){
+		var numero = document.getElementById("numero").value;
+			var teste=0;
+			for(var i=2; i<=numero; i++){
+				if(numero%i==0){
+				teste= teste+1;
+				//nao e primo
+				}
+				
+			
+			}	
+		if(teste>1){
+			document.getElementById("msg").innerHTML = "o numero não é primo";
+			}
+		else{
+			document.getElementById("msg").innerHTML = "o numero é primo";
+			}
+		}
+	</script>
+</head>
+<body>
+	<form>
+		Numero <input type="number" name="numero" id="numero"/>
+		<input type="button" value="Calcular" onclick="primoOunao()"/>
+	</form>
+	<h1 id="msg"></h1>
+</body>
+</html>
